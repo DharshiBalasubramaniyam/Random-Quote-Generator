@@ -1,0 +1,102 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--main-color);
+    outline: none;
+}
+:root {
+    --main-color: rgb(228, 61, 23);
+}
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+.container {
+    background-color: var(--main-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.quote-box {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 5px white;
+}
+p{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-style: oblique;
+}
+small {
+    text-align: right;
+    display: block;
+    margin: 10px 0 25px 0;
+}
+h1 {
+    font-weight: 600;
+    font-size: 27px;
+    position: relative;
+}
+h1::after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 30%;
+    top: 40px;
+    left: 155px;
+    background-color: var(--main-color);
+    background-image: linear-gradient(90deg, var(--main-color) 50%, var(--text-color));
+    border-radius:25px ;
+}
+.btns {
+    text-align: right;
+}
+i{
+    font-size: 25px;
+}
+button {
+    padding: 7px 15px;
+    font-size: 15px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    margin-left: 10px;
+    transition: 0.5s;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.copy.disabled {
+    opacity: 0.3;
+    background-color: white;
+    color: var(--text-color);
+    pointer-events: none;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    opacity: 1;
+}
+@media all and (max-width:500px) {
+    h1{
+        font-size: 20px;
+    }
+    h1::after {
+        display: none;
+    }
+    p {
+        font-size: 15px;margin-top: 10px;
+    }
+    button {
+        font-size: 14px;
+    }
+}
